@@ -22,6 +22,7 @@ background:var(--bg);
 color:var(--text);
 font-family:'Inter',sans-serif;
 line-height:1.7;
+overflow-x:hidden;
 }
 
 .container{
@@ -53,6 +54,11 @@ align-items:center;
 
 .brand img{
 height:85px;
+display:block;
+}
+
+.menu-toggle{
+display:none;
 }
 
 .main-nav{
@@ -77,7 +83,6 @@ rgba(0,0,0,.40) 65%,
 rgba(0,0,0,.20) 100%
 ),
 url("assets/hero-valkara.jpg");
-
 background-size:cover;
 background-position:center;
 display:flex;
@@ -265,28 +270,98 @@ justify-content:space-between;
 
 @media(max-width:900px){
 
-.main-nav{
-display:none;
+.site-header{
+background:rgba(0,0,0,.86);
+}
+
+.header-inner{
+height:92px;
 }
 
 .brand img{
-height:70px;
+height:74px;
+}
+
+.menu-toggle{
+display:flex;
+position:fixed;
+top:24px;
+right:22px;
+width:46px;
+height:46px;
+border-radius:50%;
+border:1px solid rgba(185,146,85,.45);
+background:rgba(10,10,10,.9);
+color:var(--gold);
+font-size:1.35rem;
+align-items:center;
+justify-content:center;
+cursor:pointer;
+z-index:1001;
+backdrop-filter:blur(10px);
+}
+
+.main-nav{
+display:none;
+position:fixed;
+top:86px;
+right:20px;
+width:260px;
+padding:24px;
+background:rgba(10,10,10,.96);
+border:1px solid rgba(185,146,85,.28);
+border-radius:18px;
+flex-direction:column;
+gap:18px;
+z-index:1000;
+box-shadow:0 20px 60px rgba(0,0,0,.55);
+}
+
+.main-nav.open{
+display:flex;
+}
+
+.hero{
+min-height:100vh;
+background-position:70% center;
+align-items:flex-end;
+padding-bottom:44px;
 }
 
 .hero-content{
 margin-left:0;
+max-width:100%;
+padding:0 22px;
+}
+
+.eyebrow{
+font-size:.78rem;
+letter-spacing:5px;
 }
 
 .hero h1{
-font-size:3.3rem;
+font-size:3rem;
+line-height:.92;
+max-width:100%;
 }
 
 .hero p{
 font-size:1rem;
+line-height:1.6;
+max-width:100%;
 }
 
 .hero-actions{
 flex-direction:column;
+width:100%;
+gap:16px;
+margin-top:30px;
+}
+
+.hero-actions .btn{
+width:100%;
+padding:18px 24px;
+border-radius:16px;
 }
 
 .section{
