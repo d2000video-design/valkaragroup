@@ -85,7 +85,8 @@ display:none;
 }
 
 .hero-content{
-max-width:650px;
+  max-width:650px;
+  margin-left:-80px;
 }
 
 .eyebrow{
