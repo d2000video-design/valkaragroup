@@ -77,7 +77,6 @@ rgba(0,0,0,.40) 65%,
 rgba(0,0,0,.20) 100%
 ),
 url("assets/hero-valkara.jpg");
-
 background-size:cover;
 background-position:center;
 display:flex;
@@ -148,18 +147,37 @@ color:var(--gold);
 text-transform:uppercase;
 letter-spacing:3px;
 font-size:.8rem;
+display:block;
+margin-bottom:24px;
 }
 
 .section h2{
 font-family:'Cormorant Garamond',serif;
 font-size:4rem;
 line-height:1;
-margin:18px 0 25px;
+margin:0 0 28px;
 color:#fff;
 }
 
 .section p{
 color:var(--muted);
+}
+
+.intro-section{
+background:#0b0b0c;
+padding:130px 0 120px;
+}
+
+.intro-section h2{
+font-size:3.45rem;
+line-height:1.05;
+max-width:1050px;
+}
+
+.intro-section p{
+font-size:1.08rem;
+max-width:920px;
+margin-bottom:14px;
 }
 
 .pillars-section,
@@ -239,12 +257,36 @@ justify-content:space-between;
 display:none;
 }
 
+.brand img{
+height:70px;
+}
+
 .hero-content{
 margin-left:0;
 }
 
 .hero h1{
-font-size:3.5rem;
+font-size:3.3rem;
+}
+
+.hero p{
+font-size:1rem;
+}
+
+.hero-actions{
+flex-direction:column;
+}
+
+.section{
+padding:80px 0;
+}
+
+.section h2{
+font-size:2.8rem;
+}
+
+.intro-section h2{
+font-size:2.7rem;
 }
 
 .pillars-grid,
@@ -252,14 +294,6 @@ font-size:3.5rem;
 .project-feature,
 .contact-grid{
 grid-template-columns:1fr;
-}
-
-.section h2{
-font-size:2.8rem;
-}
-
-.hero-actions{
-flex-direction:column;
 }
 
 .footer-inner{
