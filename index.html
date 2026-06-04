@@ -22,7 +22,11 @@
             <img src="assets/valkara-logo.png" alt="Valkara Group">
         </a>
 
-        <nav class="main-nav">
+        <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu">
+            ☰
+        </button>
+
+        <nav class="main-nav" id="mainNav">
             <a href="#inicio">Início</a>
             <a href="#quem-somos">Quem Somos</a>
             <a href="#projetos">Projetos</a>
@@ -58,10 +62,10 @@
     <div class="container narrow">
         <span class="section-label">Quem somos</span>
 
-       <h2>
-Não começamos pelo produto.<br>
-Começamos pelo problema.
-</h2>
+        <h2>
+            Não começamos pelo produto.<br>
+            Começamos pelo problema.
+        </h2>
 
         <p>
             A Valkara nasce de uma pergunta simples: o que precisa ser resolvido?
@@ -198,6 +202,15 @@ Começamos pelo problema.
         <p>Medimos o nosso sucesso pela quantidade de problemas que ajudamos a resolver.</p>
     </div>
 </footer>
+
+<script>
+const menuToggle = document.getElementById('menuToggle');
+const mainNav = document.getElementById('mainNav');
+
+menuToggle.addEventListener('click', () => {
+    mainNav.classList.toggle('open');
+});
+</script>
 
 </body>
 </html>
