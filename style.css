@@ -258,5 +258,7 @@ flex-direction:column;
 flex-direction:column;
 gap:15px;
 }
-
+.intro-section h2{
+    max-width:1400px;
+}
 }
