@@ -132,6 +132,9 @@ font-weight:500;
 background:var(--gold);
 color:#000;
 }
+.project-text .btn{
+margin-top:25px;
+}
 
 .btn-secondary{
 border:1px solid var(--gold);
