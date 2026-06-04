@@ -25,8 +25,12 @@ line-height:1.7;
 }
 
 .container{
-width:min(1200px,92%);
+width:min(1500px,92%);
 margin:auto;
+}
+
+.narrow{
+max-width:1500px;
 }
 
 .site-header{
@@ -48,7 +52,7 @@ align-items:center;
 }
 
 .brand img{
-height:62px;
+height:85px;
 }
 
 .main-nav{
@@ -85,8 +89,8 @@ display:none;
 }
 
 .hero-content{
-  max-width:650px;
-  margin-left:150px;
+max-width:650px;
+margin-left:150px;
 }
 
 .eyebrow{
@@ -235,6 +239,10 @@ justify-content:space-between;
 display:none;
 }
 
+.hero-content{
+margin-left:0;
+}
+
 .hero h1{
 font-size:3.5rem;
 }
@@ -258,4 +266,5 @@ flex-direction:column;
 flex-direction:column;
 gap:15px;
 }
+
 }
