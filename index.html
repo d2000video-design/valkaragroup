@@ -4,65 +4,197 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Valkara Group</title>
+<title>Valkara Group | Soluções para problemas reais</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
 <link rel="stylesheet" href="style.css">
-
 </head>
+
 <body>
 
-<header>
-    <div class="container">
-        <div class="logo">
-            VALKARA
-        </div>
+<header class="site-header">
+    <div class="container header-inner">
+        <a href="#inicio" class="brand">
+            <img src="assets/valkara-logo.png" alt="Valkara Group">
+        </a>
 
-        <nav>
-            <a href="#">Início</a>
-            <a href="#">Quem Somos</a>
-            <a href="#">Projetos</a>
-            <a href="#">Junte-se à Valkara</a>
-            <a href="#">Contacto</a>
+        <nav class="main-nav">
+            <a href="#inicio">Início</a>
+            <a href="#quem-somos">Quem Somos</a>
+            <a href="#projetos">Projetos</a>
+            <a href="#junte-se">Junte-se à Valkara</a>
+            <a href="#contacto">Contacto</a>
         </nav>
     </div>
 </header>
 
-<section class="hero">
+<main>
 
-    <div class="hero-content">
+<section id="inicio" class="hero">
+    <div class="hero-overlay"></div>
 
-        <span class="tag">
-            VALKARA GROUP
-        </span>
+    <div class="container hero-content">
+        <span class="eyebrow">VALKARA GROUP</span>
 
-        <h1>
-            Construímos soluções para problemas reais.
-        </h1>
+        <h1>Construímos soluções para problemas reais.</h1>
 
         <p>
-            Desenvolvemos projetos que unem inovação, habitação,
-            tecnologia, saúde e comunidade para responder aos
-            desafios da sociedade moderna.
+            Desenvolvemos projetos que unem inovação, habitação, tecnologia,
+            saúde e comunidade para responder aos desafios da sociedade moderna.
         </p>
 
-        <div class="buttons">
-            <a href="#" class="btn-primary">
-                Conheça a Valkara
-            </a>
+        <div class="hero-actions">
+            <a href="#projetos" class="btn btn-primary">Conheça os Projetos</a>
+            <a href="#junte-se" class="btn btn-secondary">Junte-se à Valkara</a>
+        </div>
+    </div>
+</section>
 
-            <a href="#" class="btn-secondary">
-                Nossos Projetos
-            </a>
+<section id="quem-somos" class="section intro-section">
+    <div class="container narrow">
+        <span class="section-label">Quem somos</span>
+
+        <h2>Não começamos pelo produto. Começamos pelo problema.</h2>
+
+        <p>
+            A Valkara nasce de uma pergunta simples: o que precisa ser resolvido?
+            Quando o ponto de partida é o problema, a empresa deixa de empurrar
+            serviços e passa a construir aquilo que as pessoas realmente precisam.
+        </p>
+
+        <p>
+            O nosso propósito é melhorar a vida das pessoas através de soluções
+            integradas, sustentáveis e pensadas para o longo prazo.
+        </p>
+    </div>
+</section>
+
+<section class="section pillars-section">
+    <div class="container">
+        <span class="section-label">Como pensamos</span>
+
+        <div class="section-heading">
+            <h2>Trabalhamos à frente do problema.</h2>
+            <p>
+                Enquanto muitos reagem quando algo dá errado, a Valkara desenvolve
+                estruturas capazes de antecipar riscos e transformar desafios em valor.
+            </p>
         </div>
 
-    </div>
+        <div class="pillars-grid">
+            <article class="pillar-card">
+                <span>01</span>
+                <h3>Antecipar</h3>
+                <p>Identificar riscos antes que eles se tornem problemas.</p>
+            </article>
 
+            <article class="pillar-card">
+                <span>02</span>
+                <h3>Integrar</h3>
+                <p>Unir habitação, saúde, tecnologia, educação e comunidade.</p>
+            </article>
+
+            <article class="pillar-card">
+                <span>03</span>
+                <h3>Sustentar</h3>
+                <p>Criar impacto social com modelos economicamente sólidos.</p>
+            </article>
+
+            <article class="pillar-card">
+                <span>04</span>
+                <h3>Transformar</h3>
+                <p>Melhorar a vida das pessoas de forma prática e mensurável.</p>
+            </article>
+        </div>
+    </div>
 </section>
+
+<section id="projetos" class="section projects-section">
+    <div class="container">
+        <span class="section-label">Nossos projetos</span>
+
+        <div class="project-feature">
+            <div class="project-text">
+                <h2>Recanto do Bem Viver</h2>
+
+                <p>
+                    Um novo modelo de viver que une moradia independente,
+                    tecnologia inteligente, serviços integrados e comunidade
+                    para promover autonomia, segurança e qualidade de vida.
+                </p>
+
+                <a href="assets/recanto.pdf" target="_blank" class="btn btn-primary">
+                    Conhecer Projeto
+                </a>
+            </div>
+
+            <div class="project-card">
+                <h3>Primeiro projeto Valkara</h3>
+                <p>
+                    Uma comunidade desenhada para quem valoriza liberdade,
+                    presença e cuidado sem abrir mão da autonomia.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="junte-se" class="section join-section">
+    <div class="container">
+        <span class="section-label">Junte-se à Valkara</span>
+
+        <div class="section-heading">
+            <h2>Construímos soluções. Procuramos pessoas para construí-las conosco.</h2>
+            <p>
+                A Valkara reúne profissionais, parceiros, investidores e instituições
+                que acreditam que os grandes desafios da sociedade exigem novas formas
+                de pensar, construir e cuidar.
+            </p>
+        </div>
+
+        <div class="join-grid">
+            <div>Profissionais</div>
+            <div>Parceiros</div>
+            <div>Investidores</div>
+            <div>Municípios e Instituições</div>
+        </div>
+
+        <a href="#contacto" class="btn btn-secondary dark">Quero fazer parte</a>
+    </div>
+</section>
+
+<section id="contacto" class="section contact-section">
+    <div class="container contact-grid">
+        <div>
+            <span class="section-label">Contacto</span>
+            <h2>Vamos construir soluções para o futuro.</h2>
+        </div>
+
+        <div class="contact-info">
+            <p>Entre em contacto para projetos, parcerias, investimento ou recrutamento.</p>
+
+            <div class="social-links">
+                <a href="https://www.instagram.com/valkara_grupo/" target="_blank">Instagram</a>
+                <a href="https://www.youtube.com/@valkaragroup" target="_blank">YouTube</a>
+                <a href="https://www.tiktok.com/@valkaralsf" target="_blank">TikTok</a>
+                <a href="https://www.threads.com/@valkara_grupo" target="_blank">Threads</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+    <div class="container footer-inner">
+        <p>© Valkara Group</p>
+        <p>Medimos o nosso sucesso pela quantidade de problemas que ajudamos a resolver.</p>
+    </div>
+</footer>
 
 </body>
 </html>
