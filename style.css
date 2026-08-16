@@ -72,6 +72,10 @@ text-decoration:none;
 font-size:.95rem;
 }
 
+.main-nav a:hover{
+color:var(--gold);
+}
+
 .hero{
 min-height:100vh;
 background:
@@ -105,12 +109,13 @@ text-transform:uppercase;
 display:block;
 margin-top:25px;
 margin-bottom:10px;
+font-size:.82rem;
 }
 
 .hero h1{
 font-family:'Cormorant Garamond',serif;
 font-size:4.8rem;
-line-height:.9;
+line-height:.92;
 margin:20px 0;
 color:#fff;
 }
@@ -135,16 +140,35 @@ padding:16px 28px;
 border-radius:12px;
 text-decoration:none;
 font-weight:500;
+font-family:'Inter',sans-serif;
+font-size:.95rem;
+cursor:pointer;
+transition:.25s ease;
 }
 
 .btn-primary{
 background:var(--gold);
 color:#000;
+border:1px solid var(--gold);
+}
+
+.btn-primary:hover{
+background:#c9a66c;
+border-color:#c9a66c;
 }
 
 .btn-secondary{
 border:1px solid var(--gold);
 color:var(--gold);
+background:transparent;
+}
+
+.btn-secondary:hover{
+background:rgba(185,146,85,.08);
+}
+
+.dark{
+background:transparent;
 }
 
 .project-text .btn{
@@ -175,6 +199,10 @@ font-weight:600;
 
 .section p{
 color:var(--muted);
+}
+
+.section-heading{
+max-width:980px;
 }
 
 .intro-section{
@@ -260,6 +288,174 @@ color:var(--gold);
 text-decoration:none;
 }
 
+
+/* CONHECIMENTO */
+
+.knowledge-section{
+background:#0b0b0c;
+border-top:1px solid rgba(185,146,85,.08);
+border-bottom:1px solid rgba(185,146,85,.08);
+}
+
+.knowledge-intro{
+max-width:980px;
+}
+
+.knowledge-meta{
+display:block;
+color:var(--gold);
+font-size:.76rem;
+letter-spacing:2.2px;
+text-transform:uppercase;
+margin-bottom:22px;
+}
+
+.knowledge-intro h2{
+max-width:1000px;
+}
+
+.knowledge-intro p{
+max-width:820px;
+font-size:1.08rem;
+margin-bottom:32px;
+}
+
+.knowledge-toggle{
+margin-top:4px;
+}
+
+.knowledge-content{
+margin-top:70px;
+}
+
+.knowledge-content[hidden]{
+display:none;
+}
+
+.knowledge-inner{
+border-top:1px solid rgba(185,146,85,.22);
+padding-top:70px;
+}
+
+.knowledge-block{
+margin-bottom:110px;
+}
+
+.knowledge-block > p{
+max-width:850px;
+font-size:1.05rem;
+margin-bottom:35px;
+}
+
+.knowledge-grid{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:24px;
+margin-top:45px;
+}
+
+.knowledge-item{
+background:var(--card);
+border:1px solid var(--border);
+border-radius:18px;
+padding:34px;
+}
+
+.knowledge-item span{
+display:block;
+color:var(--gold);
+font-size:.85rem;
+font-weight:600;
+margin-bottom:12px;
+}
+
+.knowledge-item h3{
+color:#fff;
+font-size:1.18rem;
+margin-bottom:12px;
+}
+
+.knowledge-item p{
+font-size:.96rem;
+}
+
+.steps-list{
+display:flex;
+flex-direction:column;
+gap:0;
+margin-top:45px;
+border-top:1px solid var(--border);
+}
+
+.step-item{
+display:grid;
+grid-template-columns:80px 1fr;
+gap:28px;
+padding:34px 0;
+border-bottom:1px solid var(--border);
+}
+
+.step-item > span{
+font-family:'Cormorant Garamond',serif;
+font-size:2.2rem;
+color:var(--gold);
+line-height:1;
+}
+
+.step-item h3{
+color:#fff;
+font-size:1.28rem;
+margin-bottom:10px;
+}
+
+.step-item p{
+max-width:850px;
+}
+
+.knowledge-links{
+display:flex;
+flex-wrap:wrap;
+gap:14px;
+margin-top:16px;
+}
+
+.knowledge-links a{
+color:var(--gold);
+text-decoration:none;
+font-size:.9rem;
+padding-bottom:2px;
+border-bottom:1px solid rgba(185,146,85,.35);
+}
+
+.knowledge-links a:hover{
+border-color:var(--gold);
+}
+
+.knowledge-sources{
+background:#101012;
+border:1px solid var(--border);
+border-radius:18px;
+padding:38px;
+margin-top:30px;
+}
+
+.knowledge-sources p{
+max-width:900px;
+}
+
+.knowledge-disclaimer{
+font-size:.86rem;
+margin-top:24px;
+opacity:.8;
+}
+
+.knowledge-close{
+margin-top:45px;
+}
+
+
+/* FOOTER */
+
 .site-footer{
 background:#050505;
 border-top:1px solid rgba(185,146,85,.15);
@@ -269,7 +465,11 @@ padding:30px 0;
 .footer-inner{
 display:flex;
 justify-content:space-between;
+gap:30px;
 }
+
+
+/* MOBILE */
 
 @media(max-width:900px){
 
@@ -326,7 +526,7 @@ display:flex;
 
 .hero{
 min-height:100vh;
-background-position:70% center;
+background-position:72% center;
 align-items:flex-end;
 padding-bottom:44px;
 }
@@ -338,13 +538,14 @@ padding:0 22px;
 }
 
 .eyebrow{
-font-size:.78rem;
-letter-spacing:5px;
+font-size:.70rem;
+letter-spacing:3px;
+margin-top:40px;
 }
 
 .hero h1{
 font-size:3rem;
-line-height:.92;
+line-height:.94;
 max-width:100%;
 }
 
@@ -378,8 +579,39 @@ font-size:2.8rem;
 .pillars-grid,
 .join-grid,
 .project-feature,
-.contact-grid{
+.contact-grid,
+.knowledge-grid{
 grid-template-columns:1fr;
+}
+
+.knowledge-content{
+margin-top:55px;
+}
+
+.knowledge-inner{
+padding-top:55px;
+}
+
+.knowledge-block{
+margin-bottom:80px;
+}
+
+.knowledge-item{
+padding:28px;
+}
+
+.step-item{
+grid-template-columns:48px 1fr;
+gap:18px;
+padding:28px 0;
+}
+
+.step-item > span{
+font-size:1.7rem;
+}
+
+.knowledge-sources{
+padding:28px;
 }
 
 .footer-inner{
