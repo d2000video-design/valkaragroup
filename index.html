@@ -3,7 +3,6 @@
 <head>
 
 <meta charset="UTF-8">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Valkara Group | Incorporadora de Projetos e Soluções</title>
@@ -14,7 +13,6 @@ content="A Valkara é uma incorporadora de projetos e soluções que transforma 
 >
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
-
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
 <link
@@ -23,6 +21,60 @@ rel="stylesheet"
 >
 
 <link rel="stylesheet" href="style.css">
+
+<style>
+
+.language-switcher{
+display:flex;
+align-items:center;
+gap:8px;
+margin-left:22px;
+}
+
+.language-switcher button{
+background:none;
+border:0;
+padding:4px 3px;
+color:#999;
+font-family:'Inter',sans-serif;
+font-size:.72rem;
+letter-spacing:1px;
+cursor:pointer;
+transition:.2s ease;
+}
+
+.language-switcher button:hover,
+.language-switcher button.active{
+color:#b99255;
+}
+
+.language-separator{
+color:#444;
+font-size:.7rem;
+}
+
+@media(max-width:900px){
+
+.language-switcher{
+position:fixed;
+top:34px;
+right:82px;
+z-index:1002;
+margin:0;
+gap:5px;
+}
+
+.language-switcher button{
+font-size:.67rem;
+}
+
+.language-separator{
+font-size:.6rem;
+}
+
+}
+
+</style>
 
 </head>
 
@@ -44,47 +96,76 @@ rel="stylesheet"
         </a>
 
 
-        <button
-        class="menu-toggle"
-        id="menuToggle"
-        aria-label="Abrir menu"
-        >
-
-            ☰
-
-        </button>
-
-
         <nav
         class="main-nav"
         id="mainNav"
         >
 
-            <a href="#inicio">
+            <a href="#inicio" data-i18n="navHome">
                 Início
             </a>
 
-            <a href="#quem-somos">
+            <a href="#quem-somos" data-i18n="navAbout">
                 Quem Somos
             </a>
 
-            <a href="#projetos">
+            <a href="#projetos" data-i18n="navProjects">
                 Projetos
             </a>
 
-            <a href="#conhecimento">
+            <a href="#conhecimento" data-i18n="navKnowledge">
                 Conhecimento
             </a>
 
-            <a href="#junte-se">
+            <a href="#junte-se" data-i18n="navJoin">
                 Junte-se à Valkara
             </a>
 
-            <a href="#contacto">
+            <a href="#contacto" data-i18n="navContact">
                 Contacto
             </a>
 
         </nav>
+
+
+        <div class="language-switcher">
+
+            <button
+            type="button"
+            data-lang="pt"
+            class="active"
+            >
+                PT
+            </button>
+
+            <span class="language-separator">|</span>
+
+            <button
+            type="button"
+            data-lang="en"
+            >
+                EN
+            </button>
+
+            <span class="language-separator">|</span>
+
+            <button
+            type="button"
+            data-lang="es"
+            >
+                ES
+            </button>
+
+        </div>
+
+
+        <button
+        class="menu-toggle"
+        id="menuToggle"
+        aria-label="Abrir menu"
+        >
+            ☰
+        </button>
 
     </div>
 
@@ -104,25 +185,25 @@ class="hero"
 
     <div class="hero-overlay"></div>
 
-
     <div class="container hero-content">
 
 
-        <span class="eyebrow">
-
+        <span
+        class="eyebrow"
+        data-i18n="heroEyebrow"
+        >
             INCORPORADORA DE PROJETOS E SOLUÇÕES
-
         </span>
 
 
-        <h1>
+        <h1 data-i18n="heroTitle">
 
             Transformamos problemas em projetos que geram valor.
 
         </h1>
 
 
-        <p>
+        <p data-i18n="heroText">
 
             Da ideia à estrutura, desenvolvemos soluções viáveis,
             sustentáveis e preparadas para sair do papel.
@@ -136,20 +217,18 @@ class="hero"
             <a
             href="#projetos"
             class="btn btn-primary"
+            data-i18n="heroProjects"
             >
-
                 Conheça os Projetos
-
             </a>
 
 
             <a
             href="#junte-se"
             class="btn btn-secondary"
+            data-i18n="heroJoin"
             >
-
                 Junte-se à Valkara
-
             </a>
 
 
@@ -171,14 +250,15 @@ class="section intro-section"
     <div class="container narrow">
 
 
-        <span class="section-label">
-
+        <span
+        class="section-label"
+        data-i18n="aboutLabel"
+        >
             Quem somos
-
         </span>
 
 
-        <h2>
+        <h2 data-i18n-html="aboutTitle">
 
             Não começamos pelo produto.<br>
             Começamos pelo problema.
@@ -186,7 +266,7 @@ class="section intro-section"
         </h2>
 
 
-        <p>
+        <p data-i18n="aboutP1">
 
             A Valkara é uma incorporadora de projetos e soluções que nasce
             de uma pergunta simples: o que precisa ser resolvido?
@@ -194,7 +274,7 @@ class="section intro-section"
         </p>
 
 
-        <p>
+        <p data-i18n="aboutP2">
 
             Identificamos necessidades reais e transformamos essas necessidades
             em projetos estruturados, reunindo estratégia, conhecimento,
@@ -204,7 +284,7 @@ class="section intro-section"
         </p>
 
 
-        <p>
+        <p data-i18n="aboutP3">
 
             Para nós, o projeto não termina na ideia. Incorporar significa
             transformar uma necessidade em uma solução capaz de sair do papel,
@@ -226,24 +306,25 @@ class="section intro-section"
     <div class="container">
 
 
-        <span class="section-label">
-
+        <span
+        class="section-label"
+        data-i18n="howLabel"
+        >
             Como incorporamos
-
         </span>
 
 
         <div class="section-heading">
 
 
-            <h2>
+            <h2 data-i18n="howTitle">
 
                 Do problema à solução.
 
             </h2>
 
 
-            <p>
+            <p data-i18n="howText">
 
                 Cada projeto Valkara nasce de uma necessidade concreta.
                 A partir dela, desenvolvemos a solução, estruturamos o modelo
@@ -261,15 +342,13 @@ class="section intro-section"
 
             <article class="pillar-card">
 
-                <span>
-                    01
-                </span>
+                <span>01</span>
 
-                <h3>
+                <h3 data-i18n="pillar1Title">
                     Identificar
                 </h3>
 
-                <p>
+                <p data-i18n="pillar1Text">
 
                     Encontrar problemas, necessidades e oportunidades que
                     ainda não receberam respostas adequadas.
@@ -282,15 +361,13 @@ class="section intro-section"
 
             <article class="pillar-card">
 
-                <span>
-                    02
-                </span>
+                <span>02</span>
 
-                <h3>
+                <h3 data-i18n="pillar2Title">
                     Desenvolver
                 </h3>
 
-                <p>
+                <p data-i18n="pillar2Text">
 
                     Transformar necessidades em conceitos, modelos
                     e soluções estruturadas.
@@ -303,15 +380,13 @@ class="section intro-section"
 
             <article class="pillar-card">
 
-                <span>
-                    03
-                </span>
+                <span>03</span>
 
-                <h3>
+                <h3 data-i18n="pillar3Title">
                     Integrar
                 </h3>
 
-                <p>
+                <p data-i18n="pillar3Text">
 
                     Reunir conhecimento, tecnologia, parceiros,
                     investimento e operação em torno do projeto.
@@ -324,15 +399,13 @@ class="section intro-section"
 
             <article class="pillar-card">
 
-                <span>
-                    04
-                </span>
+                <span>04</span>
 
-                <h3>
+                <h3 data-i18n="pillar4Title">
                     Viabilizar
                 </h3>
 
-                <p>
+                <p data-i18n="pillar4Text">
 
                     Construir modelos sustentáveis capazes de transformar
                     projetos em soluções reais.
@@ -360,12 +433,12 @@ class="section projects-section"
     <div class="container">
 
 
-        <span class="section-label">
-
+        <span
+        class="section-label"
+        data-i18n="projectsLabel"
+        >
             Nossos projetos
-
         </span>
-
 
 
         <div class="project-feature">
@@ -375,13 +448,11 @@ class="section projects-section"
 
 
                 <h2>
-
                     Recanto do Bem Viver
-
                 </h2>
 
 
-                <p>
+                <p data-i18n="recantoP1">
 
                     Um projeto incorporado pela Valkara para responder a um
                     dos grandes desafios do envelhecimento: preservar autonomia
@@ -390,7 +461,7 @@ class="section projects-section"
                 </p>
 
 
-                <p>
+                <p data-i18n="recantoP2">
 
                     O Recanto integra moradia independente, tecnologia inteligente,
                     serviços e convivência num novo modelo de viver.
@@ -403,10 +474,9 @@ class="section projects-section"
                 target="_blank"
                 rel="noopener noreferrer"
                 class="btn btn-primary"
+                data-i18n="projectButton"
                 >
-
                     Conhecer Projeto
-
                 </a>
 
 
@@ -417,14 +487,12 @@ class="section projects-section"
             <div class="project-card">
 
 
-                <h3>
-
+                <h3 data-i18n="projectCardTitle">
                     Projeto Valkara
-
                 </h3>
 
 
-                <p>
+                <p data-i18n="projectCardText">
 
                     Uma necessidade real transformada em um projeto estruturado
                     para gerar impacto social, qualidade de vida e valor sustentável.
@@ -453,31 +521,33 @@ class="section knowledge-section"
     <div class="container">
 
 
-        <span class="section-label">
-
+        <span
+        class="section-label"
+        data-i18n="knowledgeLabel"
+        >
             Conhecimento
-
         </span>
 
 
         <div class="knowledge-intro">
 
 
-            <span class="knowledge-meta">
-
+            <span
+            class="knowledge-meta"
+            data-i18n="knowledgeMeta"
+            >
                 GUIA GRATUITO · FONTES OFICIAIS · ATUALIZADO AGO 2026
-
             </span>
 
 
-            <h2>
+            <h2 data-i18n="knowledgeTitle">
 
                 As novas regras para construir em Portugal
 
             </h2>
 
 
-            <p>
+            <p data-i18n="knowledgeIntro">
 
                 O licenciamento urbanístico em Portugal passou por uma nova
                 reforma em 2026. Reunimos os principais pontos para ajudar
@@ -493,10 +563,9 @@ class="section knowledge-section"
             type="button"
             aria-expanded="false"
             aria-controls="knowledgeContent"
+            data-i18n="knowledgeOpen"
             >
-
                 Explorar o Guia
-
             </button>
 
 
@@ -514,25 +583,24 @@ class="section knowledge-section"
             <div class="knowledge-inner">
 
 
-
                 <!-- 5 MUDANÇAS -->
 
                 <div class="knowledge-block">
 
 
-                    <span class="section-label">
-
+                    <span
+                    class="section-label"
+                    data-i18n="changesLabel"
+                    >
                         O que mudou
-
                     </span>
 
 
-                    <h2>
+                    <h2 data-i18n="changesTitle">
 
                         5 mudanças que precisa conhecer
 
                     </h2>
-
 
 
                     <div class="knowledge-grid">
@@ -540,15 +608,13 @@ class="section knowledge-section"
 
                         <article class="knowledge-item">
 
-                            <span>
-                                01
-                            </span>
+                            <span>01</span>
 
-                            <h3>
+                            <h3 data-i18n="change1Title">
                                 Comunicação prévia
                             </h3>
 
-                            <p>
+                            <p data-i18n="change1Text">
 
                                 A reforma amplia o papel da comunicação prévia
                                 em operações urbanísticas abrangidas pelo regime,
@@ -563,15 +629,13 @@ class="section knowledge-section"
 
                         <article class="knowledge-item">
 
-                            <span>
-                                02
-                            </span>
+                            <span>02</span>
 
-                            <h3>
+                            <h3 data-i18n="change2Title">
                                 Deferimento tácito
                             </h3>
 
-                            <p>
+                            <p data-i18n="change2Text">
 
                                 Em procedimentos expressamente previstos na lei,
                                 o decurso do prazo sem decisão administrativa pode
@@ -585,15 +649,13 @@ class="section knowledge-section"
 
                         <article class="knowledge-item">
 
-                            <span>
-                                03
-                            </span>
+                            <span>03</span>
 
-                            <h3>
+                            <h3 data-i18n="change3Title">
                                 Operações isentas
                             </h3>
 
-                            <p>
+                            <p data-i18n="change3Text">
 
                                 O regime revisto amplia e reorganiza situações
                                 em que determinadas intervenções podem beneficiar
@@ -607,15 +669,13 @@ class="section knowledge-section"
 
                         <article class="knowledge-item">
 
-                            <span>
-                                04
-                            </span>
+                            <span>04</span>
 
-                            <h3>
+                            <h3 data-i18n="change4Title">
                                 Procedimentos digitais
                             </h3>
 
-                            <p>
+                            <p data-i18n="change4Text">
 
                                 A digitalização e a uniformização documental ganham
                                 maior relevância, com modelos e elementos instrutórios
@@ -629,15 +689,13 @@ class="section knowledge-section"
 
                         <article class="knowledge-item">
 
-                            <span>
-                                05
-                            </span>
+                            <span>05</span>
 
-                            <h3>
+                            <h3 data-i18n="change5Title">
                                 Segurança jurídica
                             </h3>
 
-                            <p>
+                            <p data-i18n="change5Text">
 
                                 O novo enquadramento revê regras relacionadas com
                                 procedimentos, responsabilidades e invalidade de
@@ -660,21 +718,22 @@ class="section knowledge-section"
                 <div class="knowledge-block">
 
 
-                    <span class="section-label">
-
+                    <span
+                    class="section-label"
+                    data-i18n="stepsLabel"
+                    >
                         Passo a passo
-
                     </span>
 
 
-                    <h2>
+                    <h2 data-i18n="stepsTitle">
 
                         Como preparar um projeto em Portugal
 
                     </h2>
 
 
-                    <p>
+                    <p data-i18n="stepsIntro">
 
                         Sete etapas fundamentais antes de transformar
                         uma ideia em obra.
@@ -688,30 +747,21 @@ class="section knowledge-section"
 
                         <article class="step-item">
 
-
-                            <span>
-                                01
-                            </span>
-
+                            <span>01</span>
 
                             <div>
 
-
-                                <h3>
-
+                                <h3 data-i18n="step1Title">
                                     Escolha e analise o terreno
-
                                 </h3>
 
-
-                                <p>
+                                <p data-i18n="step1Text">
 
                                     Antes de comprar, confirme o enquadramento
                                     no PDM, classificação do solo, capacidade
                                     construtiva e eventuais condicionantes.
 
                                 </p>
-
 
                                 <div class="knowledge-links">
 
@@ -720,9 +770,7 @@ class="section knowledge-section"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     >
-
                                         SNIT
-
                                     </a>
 
                                     <a
@@ -730,9 +778,7 @@ class="section knowledge-section"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     >
-
                                         Portal das Finanças
-
                                     </a>
 
                                     <a
@@ -740,16 +786,12 @@ class="section knowledge-section"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     >
-
                                         Predial Online
-
                                     </a>
 
                                 </div>
 
-
                             </div>
-
 
                         </article>
 
@@ -757,30 +799,21 @@ class="section knowledge-section"
 
                         <article class="step-item">
 
-
-                            <span>
-                                02
-                            </span>
-
+                            <span>02</span>
 
                             <div>
 
-
-                                <h3>
-
+                                <h3 data-i18n="step2Title">
                                     Contrate a equipa técnica
-
                                 </h3>
 
-
-                                <p>
+                                <p data-i18n="step2Text">
 
                                     Arquitetura, engenharia e projetos de
                                     especialidades devem ser preparados por
                                     profissionais legalmente habilitados.
 
                                 </p>
-
 
                                 <div class="knowledge-links">
 
@@ -789,9 +822,7 @@ class="section knowledge-section"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     >
-
                                         Ordem dos Arquitectos
-
                                     </a>
 
                                     <a
@@ -799,16 +830,12 @@ class="section knowledge-section"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     >
-
                                         Ordem dos Engenheiros
-
                                     </a>
 
                                 </div>
 
-
                             </div>
-
 
                         </article>
 
@@ -816,23 +843,15 @@ class="section knowledge-section"
 
                         <article class="step-item">
 
-
-                            <span>
-                                03
-                            </span>
-
+                            <span>03</span>
 
                             <div>
 
-
-                                <h3>
-
+                                <h3 data-i18n="step3Title">
                                     Identifique consultas necessárias
-
                                 </h3>
 
-
-                                <p>
+                                <p data-i18n="step3Text">
 
                                     Dependendo da localização e das características
                                     do projeto, podem existir pareceres ou consultas
@@ -841,9 +860,7 @@ class="section knowledge-section"
 
                                 </p>
 
-
                             </div>
-
 
                         </article>
 
@@ -851,30 +868,21 @@ class="section knowledge-section"
 
                         <article class="step-item">
 
-
-                            <span>
-                                04
-                            </span>
-
+                            <span>04</span>
 
                             <div>
 
-
-                                <h3>
-
+                                <h3 data-i18n="step4Title">
                                     Prepare a submissão
-
                                 </h3>
 
-
-                                <p>
+                                <p data-i18n="step4Text">
 
                                     Organize os projetos, termos de responsabilidade,
                                     elementos técnicos e demais documentos exigíveis
                                     para o procedimento aplicável.
 
                                 </p>
-
 
                                 <div class="knowledge-links">
 
@@ -883,16 +891,12 @@ class="section knowledge-section"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     >
-
                                         ePortugal
-
                                     </a>
 
                                 </div>
 
-
                             </div>
-
 
                         </article>
 
@@ -900,23 +904,15 @@ class="section knowledge-section"
 
                         <article class="step-item">
 
-
-                            <span>
-                                05
-                            </span>
-
+                            <span>05</span>
 
                             <div>
 
-
-                                <h3>
-
+                                <h3 data-i18n="step5Title">
                                     Confirme quando pode iniciar
-
                                 </h3>
 
-
-                                <p>
+                                <p data-i18n="step5Text">
 
                                     O momento em que a obra pode começar depende
                                     do procedimento urbanístico aplicável ao projeto.
@@ -925,9 +921,7 @@ class="section knowledge-section"
 
                                 </p>
 
-
                             </div>
-
 
                         </article>
 
@@ -935,30 +929,21 @@ class="section knowledge-section"
 
                         <article class="step-item">
 
-
-                            <span>
-                                06
-                            </span>
-
+                            <span>06</span>
 
                             <div>
 
-
-                                <h3>
-
+                                <h3 data-i18n="step6Title">
                                     Verifique a construtora
-
                                 </h3>
 
-
-                                <p>
+                                <p data-i18n="step6Text">
 
                                     Confirme habilitações, alvarás, histórico,
                                     condições contratuais, fases de pagamento
                                     e responsabilidades antes de adjudicar a obra.
 
                                 </p>
-
 
                                 <div class="knowledge-links">
 
@@ -967,16 +952,12 @@ class="section knowledge-section"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     >
-
                                         IMPIC
-
                                     </a>
 
                                 </div>
 
-
                             </div>
-
 
                         </article>
 
@@ -984,30 +965,21 @@ class="section knowledge-section"
 
                         <article class="step-item">
 
-
-                            <span>
-                                07
-                            </span>
-
+                            <span>07</span>
 
                             <div>
 
-
-                                <h3>
-
+                                <h3 data-i18n="step7Title">
                                     Avalie financiamento e apoios
-
                                 </h3>
 
-
-                                <p>
+                                <p data-i18n="step7Text">
 
                                     Dependendo da natureza, localização e objetivo
                                     do projeto, podem existir programas de apoio,
                                     financiamento ou incentivo relevantes.
 
                                 </p>
-
 
                                 <div class="knowledge-links">
 
@@ -1016,9 +988,7 @@ class="section knowledge-section"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     >
-
                                         Portugal 2030
-
                                     </a>
 
                                     <a
@@ -1026,9 +996,7 @@ class="section knowledge-section"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     >
-
                                         IAPMEI
-
                                     </a>
 
                                     <a
@@ -1036,16 +1004,12 @@ class="section knowledge-section"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     >
-
                                         Turismo de Portugal
-
                                     </a>
 
                                 </div>
 
-
                             </div>
-
 
                         </article>
 
@@ -1057,26 +1021,27 @@ class="section knowledge-section"
 
 
 
-                <!-- PRAZOS -->
+                <!-- PLANEAMENTO -->
 
                 <div class="knowledge-block">
 
 
-                    <span class="section-label">
-
+                    <span
+                    class="section-label"
+                    data-i18n="planningLabel"
+                    >
                         Planeamento
-
                     </span>
 
 
-                    <h2>
+                    <h2 data-i18n="planningTitle">
 
                         Os prazos passaram a ter ainda mais importância.
 
                     </h2>
 
 
-                    <p>
+                    <p data-i18n="planningText">
 
                         O regime estabelece diferentes prazos conforme
                         o procedimento, a operação urbanística e a fase
@@ -1095,14 +1060,15 @@ class="section knowledge-section"
                 <div class="knowledge-sources">
 
 
-                    <span class="section-label">
-
+                    <span
+                    class="section-label"
+                    data-i18n="sourcesLabel"
+                    >
                         Fontes oficiais
-
                     </span>
 
 
-                    <p>
+                    <p data-i18n="sourcesText">
 
                         Conteúdo preparado a partir do Regime Jurídico da
                         Urbanização e da Edificação, Decreto-Lei n.º 108/2026,
@@ -1114,59 +1080,47 @@ class="section knowledge-section"
 
                     <div class="knowledge-links">
 
-
                         <a
                         href="https://diariodarepublica.pt/"
                         target="_blank"
                         rel="noopener noreferrer"
                         >
-
                             Diário da República
-
                         </a>
-
 
                         <a
                         href="https://eportugal.gov.pt/"
                         target="_blank"
                         rel="noopener noreferrer"
                         >
-
                             ePortugal
-
                         </a>
-
 
                         <a
                         href="https://www.dgterritorio.gov.pt/"
                         target="_blank"
                         rel="noopener noreferrer"
                         >
-
                             Direção-Geral do Território
-
                         </a>
-
 
                         <a
                         href="https://www.impic.pt/"
                         target="_blank"
                         rel="noopener noreferrer"
                         >
-
                             IMPIC
-
                         </a>
-
 
                     </div>
 
 
-                    <p class="knowledge-disclaimer">
-
+                    <p
+                    class="knowledge-disclaimer"
+                    data-i18n="disclaimer"
+                    >
                         Este conteúdo tem caráter informativo e não substitui
                         a análise técnica ou jurídica específica de cada projeto.
-
                     </p>
 
 
@@ -1178,10 +1132,9 @@ class="section knowledge-section"
                 class="btn btn-secondary knowledge-close"
                 id="knowledgeClose"
                 type="button"
+                data-i18n="knowledgeClose"
                 >
-
                     Fechar Guia
-
                 </button>
 
 
@@ -1205,24 +1158,25 @@ class="section join-section"
     <div class="container">
 
 
-        <span class="section-label">
-
+        <span
+        class="section-label"
+        data-i18n="joinLabel"
+        >
             Junte-se à Valkara
-
         </span>
 
 
         <div class="section-heading">
 
 
-            <h2>
+            <h2 data-i18n="joinTitle">
 
                 Grandes projetos são construídos por muitas pessoas.
 
             </h2>
 
 
-            <p>
+            <p data-i18n="joinText">
 
                 A Valkara conecta profissionais, parceiros, investidores,
                 empresas e instituições capazes de contribuir para transformar
@@ -1238,31 +1192,20 @@ class="section join-section"
         <div class="join-grid">
 
 
-            <div>
-
+            <div data-i18n="joinProfessionals">
                 Profissionais
-
             </div>
 
-
-            <div>
-
+            <div data-i18n="joinPartners">
                 Parceiros
-
             </div>
 
-
-            <div>
-
+            <div data-i18n="joinInvestors">
                 Investidores
-
             </div>
 
-
-            <div>
-
+            <div data-i18n="joinInstitutions">
                 Municípios e Instituições
-
             </div>
 
 
@@ -1273,10 +1216,9 @@ class="section join-section"
         <a
         href="#contacto"
         class="btn btn-secondary dark"
+        data-i18n="joinButton"
         >
-
             Junte-se à Valkara
-
         </a>
 
 
@@ -1299,14 +1241,15 @@ class="section contact-section"
         <div>
 
 
-            <span class="section-label">
-
+            <span
+            class="section-label"
+            data-i18n="contactLabel"
+            >
                 Contacto
-
             </span>
 
 
-            <h2>
+            <h2 data-i18n="contactTitle">
 
                 Tem um problema que pode se transformar em projeto?
 
@@ -1320,7 +1263,7 @@ class="section contact-section"
         <div class="contact-info">
 
 
-            <p>
+            <p data-i18n="contactText">
 
                 Fale com a Valkara sobre projetos, soluções,
                 parcerias, investimento ou oportunidades de colaboração.
@@ -1328,53 +1271,39 @@ class="section contact-section"
             </p>
 
 
-
             <div class="social-links">
-
 
                 <a
                 href="https://www.instagram.com/valkara_grupo/"
                 target="_blank"
                 rel="noopener noreferrer"
                 >
-
                     Instagram
-
                 </a>
-
 
                 <a
                 href="https://www.youtube.com/@valkaragroup"
                 target="_blank"
                 rel="noopener noreferrer"
                 >
-
                     YouTube
-
                 </a>
-
 
                 <a
                 href="https://www.tiktok.com/@valkaralsf"
                 target="_blank"
                 rel="noopener noreferrer"
                 >
-
                     TikTok
-
                 </a>
-
 
                 <a
                 href="https://www.threads.com/@valkara_grupo"
                 target="_blank"
                 rel="noopener noreferrer"
                 >
-
                     Threads
-
                 </a>
-
 
             </div>
 
@@ -1396,16 +1325,12 @@ class="section contact-section"
 
 
         <p>
-
             © Valkara Group
-
         </p>
 
 
-        <p>
-
+        <p data-i18n="footerText">
             Incorporadora de Projetos e Soluções.
-
         </p>
 
 
@@ -1417,6 +1342,9 @@ class="section contact-section"
 
 <script>
 
+/* =============================
+   MENU MOBILE
+============================= */
 
 const menuToggle =
 document.getElementById('menuToggle');
@@ -1445,6 +1373,9 @@ document
 });
 
 
+/* =============================
+   GUIA CONHECIMENTO
+============================= */
 
 const knowledgeToggle =
 document.getElementById('knowledgeToggle');
@@ -1458,86 +1389,581 @@ document.getElementById('knowledgeClose');
 
 knowledgeToggle.addEventListener('click', () => {
 
-
     const isHidden =
     knowledgeContent.hasAttribute('hidden');
 
-
     if(isHidden){
 
-
         knowledgeContent.removeAttribute('hidden');
-
 
         knowledgeToggle.setAttribute(
             'aria-expanded',
             'true'
         );
 
-
-        knowledgeToggle.textContent =
-        'Ocultar Guia';
-
-
-    }else{
-
+    } else {
 
         knowledgeContent.setAttribute(
             'hidden',
             ''
         );
 
-
         knowledgeToggle.setAttribute(
             'aria-expanded',
             'false'
         );
 
-
-        knowledgeToggle.textContent =
-        'Explorar o Guia';
-
-
     }
-
 
 });
 
 
 knowledgeClose.addEventListener('click', () => {
 
-
     knowledgeContent.setAttribute(
         'hidden',
         ''
     );
-
 
     knowledgeToggle.setAttribute(
         'aria-expanded',
         'false'
     );
 
-
-    knowledgeToggle.textContent =
-    'Explorar o Guia';
-
-
     document
     .getElementById('conhecimento')
     .scrollIntoView({
-
         behavior:'smooth'
+    });
+
+});
+
+
+/* =============================
+   TRADUÇÕES
+============================= */
+
+const translations = {
+
+
+pt: {
+
+title:
+"Valkara Group | Incorporadora de Projetos e Soluções",
+
+description:
+"A Valkara é uma incorporadora de projetos e soluções que transforma necessidades reais em projetos estruturados, sustentáveis e capazes de gerar valor.",
+
+navHome:"Início",
+navAbout:"Quem Somos",
+navProjects:"Projetos",
+navKnowledge:"Conhecimento",
+navJoin:"Junte-se à Valkara",
+navContact:"Contacto",
+
+heroEyebrow:"INCORPORADORA DE PROJETOS E SOLUÇÕES",
+heroTitle:"Transformamos problemas em projetos que geram valor.",
+heroText:"Da ideia à estrutura, desenvolvemos soluções viáveis, sustentáveis e preparadas para sair do papel.",
+heroProjects:"Conheça os Projetos",
+heroJoin:"Junte-se à Valkara",
+
+aboutLabel:"Quem somos",
+aboutTitle:"Não começamos pelo produto.<br>Começamos pelo problema.",
+aboutP1:"A Valkara é uma incorporadora de projetos e soluções que nasce de uma pergunta simples: o que precisa ser resolvido?",
+aboutP2:"Identificamos necessidades reais e transformamos essas necessidades em projetos estruturados, reunindo estratégia, conhecimento, tecnologia, parceiros e investimento para construir soluções viáveis e sustentáveis.",
+aboutP3:"Para nós, o projeto não termina na ideia. Incorporar significa transformar uma necessidade em uma solução capaz de sair do papel, gerar valor e produzir impacto real na vida das pessoas.",
+
+howLabel:"Como incorporamos",
+howTitle:"Do problema à solução.",
+howText:"Cada projeto Valkara nasce de uma necessidade concreta. A partir dela, desenvolvemos a solução, estruturamos o modelo e reunimos os recursos necessários para torná-la realidade.",
+
+pillar1Title:"Identificar",
+pillar1Text:"Encontrar problemas, necessidades e oportunidades que ainda não receberam respostas adequadas.",
+
+pillar2Title:"Desenvolver",
+pillar2Text:"Transformar necessidades em conceitos, modelos e soluções estruturadas.",
+
+pillar3Title:"Integrar",
+pillar3Text:"Reunir conhecimento, tecnologia, parceiros, investimento e operação em torno do projeto.",
+
+pillar4Title:"Viabilizar",
+pillar4Text:"Construir modelos sustentáveis capazes de transformar projetos em soluções reais.",
+
+projectsLabel:"Nossos projetos",
+recantoP1:"Um projeto incorporado pela Valkara para responder a um dos grandes desafios do envelhecimento: preservar autonomia e liberdade sem abrir mão de segurança, cuidado e comunidade.",
+recantoP2:"O Recanto integra moradia independente, tecnologia inteligente, serviços e convivência num novo modelo de viver.",
+projectButton:"Conhecer Projeto",
+projectCardTitle:"Projeto Valkara",
+projectCardText:"Uma necessidade real transformada em um projeto estruturado para gerar impacto social, qualidade de vida e valor sustentável.",
+
+knowledgeLabel:"Conhecimento",
+knowledgeMeta:"GUIA GRATUITO · FONTES OFICIAIS · ATUALIZADO AGO 2026",
+knowledgeTitle:"As novas regras para construir em Portugal",
+knowledgeIntro:"O licenciamento urbanístico em Portugal passou por uma nova reforma em 2026. Reunimos os principais pontos para ajudar proprietários, promotores e investidores a compreender o novo enquadramento antes de iniciar um projeto.",
+knowledgeOpen:"Explorar o Guia",
+
+changesLabel:"O que mudou",
+changesTitle:"5 mudanças que precisa conhecer",
+
+change1Title:"Comunicação prévia",
+change1Text:"A reforma amplia o papel da comunicação prévia em operações urbanísticas abrangidas pelo regime, reduzindo a dependência do licenciamento tradicional em determinadas situações.",
+
+change2Title:"Deferimento tácito",
+change2Text:"Em procedimentos expressamente previstos na lei, o decurso do prazo sem decisão administrativa pode produzir efeitos favoráveis ao requerente.",
+
+change3Title:"Operações isentas",
+change3Text:"O regime revisto amplia e reorganiza situações em que determinadas intervenções podem beneficiar de isenção de controlo prévio urbanístico.",
+
+change4Title:"Procedimentos digitais",
+change4Text:"A digitalização e a uniformização documental ganham maior relevância, com modelos e elementos instrutórios definidos para os diferentes procedimentos.",
+
+change5Title:"Segurança jurídica",
+change5Text:"O novo enquadramento revê regras relacionadas com procedimentos, responsabilidades e invalidade de atos urbanísticos.",
+
+stepsLabel:"Passo a passo",
+stepsTitle:"Como preparar um projeto em Portugal",
+stepsIntro:"Sete etapas fundamentais antes de transformar uma ideia em obra.",
+
+step1Title:"Escolha e analise o terreno",
+step1Text:"Antes de comprar, confirme o enquadramento no PDM, classificação do solo, capacidade construtiva e eventuais condicionantes.",
+
+step2Title:"Contrate a equipa técnica",
+step2Text:"Arquitetura, engenharia e projetos de especialidades devem ser preparados por profissionais legalmente habilitados.",
+
+step3Title:"Identifique consultas necessárias",
+step3Text:"Dependendo da localização e das características do projeto, podem existir pareceres ou consultas a entidades externas que precisam ser considerados no planeamento.",
+
+step4Title:"Prepare a submissão",
+step4Text:"Organize os projetos, termos de responsabilidade, elementos técnicos e demais documentos exigíveis para o procedimento aplicável.",
+
+step5Title:"Confirme quando pode iniciar",
+step5Text:"O momento em que a obra pode começar depende do procedimento urbanístico aplicável ao projeto. A documentação deve estar completa e corretamente instruída.",
+
+step6Title:"Verifique a construtora",
+step6Text:"Confirme habilitações, alvarás, histórico, condições contratuais, fases de pagamento e responsabilidades antes de adjudicar a obra.",
+
+step7Title:"Avalie financiamento e apoios",
+step7Text:"Dependendo da natureza, localização e objetivo do projeto, podem existir programas de apoio, financiamento ou incentivo relevantes.",
+
+planningLabel:"Planeamento",
+planningTitle:"Os prazos passaram a ter ainda mais importância.",
+planningText:"O regime estabelece diferentes prazos conforme o procedimento, a operação urbanística e a fase de apreciação. Por isso, a análise deve ser feita caso a caso antes de definir o calendário de uma obra.",
+
+sourcesLabel:"Fontes oficiais",
+sourcesText:"Conteúdo preparado a partir do Regime Jurídico da Urbanização e da Edificação, Decreto-Lei n.º 108/2026, Portaria n.º 320/2026/1 e informação disponibilizada por entidades públicas portuguesas.",
+
+disclaimer:"Este conteúdo tem caráter informativo e não substitui a análise técnica ou jurídica específica de cada projeto.",
+
+knowledgeClose:"Fechar Guia",
+
+joinLabel:"Junte-se à Valkara",
+joinTitle:"Grandes projetos são construídos por muitas pessoas.",
+joinText:"A Valkara conecta profissionais, parceiros, investidores, empresas e instituições capazes de contribuir para transformar boas soluções em projetos reais.",
+joinProfessionals:"Profissionais",
+joinPartners:"Parceiros",
+joinInvestors:"Investidores",
+joinInstitutions:"Municípios e Instituições",
+joinButton:"Junte-se à Valkara",
+
+contactLabel:"Contacto",
+contactTitle:"Tem um problema que pode se transformar em projeto?",
+contactText:"Fale com a Valkara sobre projetos, soluções, parcerias, investimento ou oportunidades de colaboração.",
+
+footerText:"Incorporadora de Projetos e Soluções."
+
+},
+
+
+/* =============================
+   ENGLISH
+============================= */
+
+en: {
+
+title:
+"Valkara Group | Project & Solutions Developer",
+
+description:
+"Valkara is a project and solutions developer that transforms real needs into structured, sustainable projects designed to create lasting value.",
+
+navHome:"Home",
+navAbout:"About Us",
+navProjects:"Projects",
+navKnowledge:"Insights",
+navJoin:"Join Valkara",
+navContact:"Contact",
+
+heroEyebrow:"PROJECT & SOLUTIONS DEVELOPER",
+heroTitle:"We turn problems into projects that create value.",
+heroText:"From concept to structure, we develop viable, sustainable solutions designed to become reality.",
+heroProjects:"Explore Our Projects",
+heroJoin:"Join Valkara",
+
+aboutLabel:"About us",
+aboutTitle:"We don't start with the product.<br>We start with the problem.",
+aboutP1:"Valkara is a project and solutions developer built around one simple question: what needs to be solved?",
+aboutP2:"We identify real needs and turn them into structured projects, bringing together strategy, knowledge, technology, partners and investment to develop viable and sustainable solutions.",
+aboutP3:"For us, a project does not end with an idea. Development means turning a need into a solution capable of becoming reality, creating value and generating a meaningful impact on people's lives.",
+
+howLabel:"How we develop",
+howTitle:"From problem to solution.",
+howText:"Every Valkara project begins with a real need. From there, we develop the solution, structure the model and bring together the resources required to make it happen.",
+
+pillar1Title:"Identify",
+pillar1Text:"Recognise problems, needs and opportunities that have not yet received adequate solutions.",
+
+pillar2Title:"Develop",
+pillar2Text:"Turn needs into concepts, models and structured solutions.",
+
+pillar3Title:"Integrate",
+pillar3Text:"Bring together knowledge, technology, partners, investment and operations around the project.",
+
+pillar4Title:"Enable",
+pillar4Text:"Build sustainable models capable of turning projects into real solutions.",
+
+projectsLabel:"Our projects",
+recantoP1:"A project developed by Valkara to address one of the major challenges of ageing: preserving autonomy and freedom without giving up safety, care and community.",
+recantoP2:"Recanto combines independent living, intelligent technology, services and community in a new way of living.",
+projectButton:"Explore Project",
+projectCardTitle:"A Valkara Project",
+projectCardText:"A real need transformed into a structured project designed to create social impact, quality of life and sustainable value.",
+
+knowledgeLabel:"Insights",
+knowledgeMeta:"FREE GUIDE · OFFICIAL SOURCES · UPDATED AUG 2026",
+knowledgeTitle:"The new rules for building in Portugal",
+knowledgeIntro:"Portugal's urban planning and licensing framework underwent a new reform in 2026. We have gathered the key points to help owners, developers and investors understand the new framework before starting a project.",
+knowledgeOpen:"Explore the Guide",
+
+changesLabel:"What changed",
+changesTitle:"5 changes you need to know",
+
+change1Title:"Prior notification",
+change1Text:"The reform expands the role of prior notification for urban development operations covered by the regime, reducing reliance on traditional licensing in certain situations.",
+
+change2Title:"Tacit approval",
+change2Text:"In procedures expressly provided for by law, the expiry of a statutory deadline without an administrative decision may produce favourable effects for the applicant.",
+
+change3Title:"Exempt operations",
+change3Text:"The revised framework expands and reorganises situations in which certain interventions may benefit from exemption from prior urban planning control.",
+
+change4Title:"Digital procedures",
+change4Text:"Digitalisation and standardised documentation become increasingly important, with models and required supporting elements defined for different procedures.",
+
+change5Title:"Legal certainty",
+change5Text:"The new framework revises rules concerning procedures, responsibilities and the invalidity of urban planning acts.",
+
+stepsLabel:"Step by step",
+stepsTitle:"How to prepare a project in Portugal",
+stepsIntro:"Seven fundamental stages before turning an idea into a built project.",
+
+step1Title:"Choose and assess the land",
+step1Text:"Before purchasing, confirm the applicable municipal plan, land classification, development capacity and any restrictions affecting the property.",
+
+step2Title:"Hire the technical team",
+step2Text:"Architecture, engineering and specialist projects must be prepared by legally qualified professionals.",
+
+step3Title:"Identify required consultations",
+step3Text:"Depending on the location and characteristics of the project, opinions or consultations with external authorities may need to be considered during planning.",
+
+step4Title:"Prepare the submission",
+step4Text:"Organise the designs, statements of responsibility, technical documents and all other information required for the applicable procedure.",
+
+step5Title:"Confirm when construction may begin",
+step5Text:"The point at which construction may begin depends on the planning procedure applicable to the project. Documentation must be complete and correctly prepared.",
+
+step6Title:"Verify the contractor",
+step6Text:"Confirm licences, qualifications, track record, contractual conditions, payment stages and responsibilities before awarding the construction contract.",
+
+step7Title:"Assess funding and incentives",
+step7Text:"Depending on the nature, location and purpose of the project, relevant support, funding or incentive programmes may be available.",
+
+planningLabel:"Planning",
+planningTitle:"Deadlines have become even more important.",
+planningText:"The framework establishes different deadlines depending on the procedure, type of urban operation and review stage. Each project therefore requires an individual assessment before defining its construction timeline.",
+
+sourcesLabel:"Official sources",
+sourcesText:"Content prepared using Portugal's Legal Framework for Urbanisation and Building, Decree-Law No. 108/2026, Ministerial Order No. 320/2026/1 and information provided by Portuguese public authorities.",
+
+disclaimer:"This content is provided for informational purposes and does not replace project-specific technical or legal advice.",
+
+knowledgeClose:"Close Guide",
+
+joinLabel:"Join Valkara",
+joinTitle:"Great projects are built by many people.",
+joinText:"Valkara connects professionals, partners, investors, companies and institutions capable of helping turn strong solutions into real projects.",
+joinProfessionals:"Professionals",
+joinPartners:"Partners",
+joinInvestors:"Investors",
+joinInstitutions:"Municipalities & Institutions",
+joinButton:"Join Valkara",
+
+contactLabel:"Contact",
+contactTitle:"Do you have a problem that could become a project?",
+contactText:"Talk to Valkara about projects, solutions, partnerships, investment or collaboration opportunities.",
+
+footerText:"Project & Solutions Developer."
+
+},
+
+
+/* =============================
+   ESPAÑOL
+============================= */
+
+es: {
+
+title:
+"Valkara Group | Desarrolladora de Proyectos y Soluciones",
+
+description:
+"Valkara es una desarrolladora de proyectos y soluciones que transforma necesidades reales en proyectos estructurados, sostenibles y capaces de generar valor.",
+
+navHome:"Inicio",
+navAbout:"Quiénes Somos",
+navProjects:"Proyectos",
+navKnowledge:"Conocimiento",
+navJoin:"Únete a Valkara",
+navContact:"Contacto",
+
+heroEyebrow:"DESARROLLADORA DE PROYECTOS Y SOLUCIONES",
+heroTitle:"Transformamos problemas en proyectos que generan valor.",
+heroText:"De la idea a la estructura, desarrollamos soluciones viables, sostenibles y preparadas para hacerse realidad.",
+heroProjects:"Conoce los Proyectos",
+heroJoin:"Únete a Valkara",
+
+aboutLabel:"Quiénes somos",
+aboutTitle:"No comenzamos por el producto.<br>Comenzamos por el problema.",
+aboutP1:"Valkara es una desarrolladora de proyectos y soluciones que nace de una pregunta sencilla: ¿qué necesita ser resuelto?",
+aboutP2:"Identificamos necesidades reales y las transformamos en proyectos estructurados, reuniendo estrategia, conocimiento, tecnología, socios e inversión para construir soluciones viables y sostenibles.",
+aboutP3:"Para nosotros, un proyecto no termina en la idea. Desarrollar significa transformar una necesidad en una solución capaz de hacerse realidad, generar valor y producir un impacto real en la vida de las personas.",
+
+howLabel:"Cómo desarrollamos",
+howTitle:"Del problema a la solución.",
+howText:"Cada proyecto Valkara nace de una necesidad concreta. A partir de ella desarrollamos la solución, estructuramos el modelo y reunimos los recursos necesarios para convertirlo en realidad.",
+
+pillar1Title:"Identificar",
+pillar1Text:"Encontrar problemas, necesidades y oportunidades que todavía no han recibido respuestas adecuadas.",
+
+pillar2Title:"Desarrollar",
+pillar2Text:"Transformar necesidades en conceptos, modelos y soluciones estructuradas.",
+
+pillar3Title:"Integrar",
+pillar3Text:"Reunir conocimiento, tecnología, socios, inversión y operación alrededor del proyecto.",
+
+pillar4Title:"Viabilizar",
+pillar4Text:"Construir modelos sostenibles capaces de transformar proyectos en soluciones reales.",
+
+projectsLabel:"Nuestros proyectos",
+recantoP1:"Un proyecto desarrollado por Valkara para responder a uno de los grandes desafíos del envejecimiento: preservar autonomía y libertad sin renunciar a seguridad, cuidado y comunidad.",
+recantoP2:"Recanto integra vivienda independiente, tecnología inteligente, servicios y convivencia en una nueva forma de vivir.",
+projectButton:"Conocer Proyecto",
+projectCardTitle:"Proyecto Valkara",
+projectCardText:"Una necesidad real transformada en un proyecto estructurado para generar impacto social, calidad de vida y valor sostenible.",
+
+knowledgeLabel:"Conocimiento",
+knowledgeMeta:"GUÍA GRATUITA · FUENTES OFICIALES · ACTUALIZADO AGO 2026",
+knowledgeTitle:"Las nuevas reglas para construir en Portugal",
+knowledgeIntro:"El marco urbanístico y de licencias en Portugal pasó por una nueva reforma en 2026. Reunimos los principales puntos para ayudar a propietarios, promotores e inversores a comprender el nuevo contexto antes de iniciar un proyecto.",
+knowledgeOpen:"Explorar la Guía",
+
+changesLabel:"Qué cambió",
+changesTitle:"5 cambios que debes conocer",
+
+change1Title:"Comunicación previa",
+change1Text:"La reforma amplía el papel de la comunicación previa en operaciones urbanísticas cubiertas por el régimen, reduciendo la dependencia de la licencia tradicional en determinadas situaciones.",
+
+change2Title:"Aprobación tácita",
+change2Text:"En los procedimientos expresamente previstos por la ley, el vencimiento del plazo sin decisión administrativa puede producir efectos favorables para el solicitante.",
+
+change3Title:"Operaciones exentas",
+change3Text:"El régimen revisado amplía y reorganiza las situaciones en las que determinadas intervenciones pueden beneficiarse de exención de control urbanístico previo.",
+
+change4Title:"Procedimientos digitales",
+change4Text:"La digitalización y la estandarización documental adquieren mayor relevancia, con modelos y elementos necesarios definidos para los diferentes procedimientos.",
+
+change5Title:"Seguridad jurídica",
+change5Text:"El nuevo marco revisa las normas relacionadas con procedimientos, responsabilidades e invalidez de actos urbanísticos.",
+
+stepsLabel:"Paso a paso",
+stepsTitle:"Cómo preparar un proyecto en Portugal",
+stepsIntro:"Siete etapas fundamentales antes de transformar una idea en obra.",
+
+step1Title:"Elige y analiza el terreno",
+step1Text:"Antes de comprar, confirma el plan municipal aplicable, la clasificación del suelo, la capacidad constructiva y las posibles restricciones.",
+
+step2Title:"Contrata al equipo técnico",
+step2Text:"Los proyectos de arquitectura, ingeniería y especialidades deben ser preparados por profesionales legalmente habilitados.",
+
+step3Title:"Identifica las consultas necesarias",
+step3Text:"Dependiendo de la ubicación y características del proyecto, pueden existir informes o consultas a organismos externos que deben considerarse durante la planificación.",
+
+step4Title:"Prepara la presentación",
+step4Text:"Organiza los proyectos, declaraciones de responsabilidad, elementos técnicos y demás documentos exigidos para el procedimiento aplicable.",
+
+step5Title:"Confirma cuándo puedes comenzar",
+step5Text:"El momento en que puede comenzar la obra depende del procedimiento urbanístico aplicable al proyecto. La documentación debe estar completa y correctamente preparada.",
+
+step6Title:"Verifica la constructora",
+step6Text:"Comprueba licencias, habilitaciones, historial, condiciones contractuales, fases de pago y responsabilidades antes de adjudicar la obra.",
+
+step7Title:"Evalúa financiación y ayudas",
+step7Text:"Dependiendo de la naturaleza, ubicación y objetivo del proyecto, pueden existir programas de apoyo, financiación o incentivos relevantes.",
+
+planningLabel:"Planificación",
+planningTitle:"Los plazos son ahora aún más importantes.",
+planningText:"El régimen establece diferentes plazos según el procedimiento, la operación urbanística y la fase de evaluación. Por ello, cada proyecto debe analizarse individualmente antes de definir el calendario de obra.",
+
+sourcesLabel:"Fuentes oficiales",
+sourcesText:"Contenido elaborado a partir del Régimen Jurídico de Urbanización y Edificación, Decreto-Ley n.º 108/2026, Orden n.º 320/2026/1 e información facilitada por organismos públicos portugueses.",
+
+disclaimer:"Este contenido tiene carácter informativo y no sustituye el análisis técnico o jurídico específico de cada proyecto.",
+
+knowledgeClose:"Cerrar Guía",
+
+joinLabel:"Únete a Valkara",
+joinTitle:"Los grandes proyectos son construidos por muchas personas.",
+joinText:"Valkara conecta profesionales, socios, inversores, empresas e instituciones capaces de contribuir a transformar buenas soluciones en proyectos reales.",
+joinProfessionals:"Profesionales",
+joinPartners:"Socios",
+joinInvestors:"Inversores",
+joinInstitutions:"Municipios e Instituciones",
+joinButton:"Únete a Valkara",
+
+contactLabel:"Contacto",
+contactTitle:"¿Tienes un problema que puede convertirse en proyecto?",
+contactText:"Habla con Valkara sobre proyectos, soluciones, alianzas, inversión u oportunidades de colaboración.",
+
+footerText:"Desarrolladora de Proyectos y Soluciones."
+
+}
+
+};
+
+
+/* =============================
+   TROCA DE IDIOMA
+============================= */
+
+function setLanguage(lang){
+
+    const dictionary =
+    translations[lang] || translations.pt;
+
+
+    document.documentElement.lang = lang;
+
+
+    document.title =
+    dictionary.title;
+
+
+    const description =
+    document.querySelector(
+        'meta[name="description"]'
+    );
+
+    if(description){
+
+        description.setAttribute(
+            'content',
+            dictionary.description
+        );
+
+    }
+
+
+    document
+    .querySelectorAll('[data-i18n]')
+    .forEach(element => {
+
+        const key =
+        element.getAttribute('data-i18n');
+
+        if(dictionary[key] !== undefined){
+
+            element.textContent =
+            dictionary[key];
+
+        }
 
     });
 
 
+    document
+    .querySelectorAll('[data-i18n-html]')
+    .forEach(element => {
+
+        const key =
+        element.getAttribute(
+            'data-i18n-html'
+        );
+
+        if(dictionary[key] !== undefined){
+
+            element.innerHTML =
+            dictionary[key];
+
+        }
+
+    });
+
+
+    document
+    .querySelectorAll(
+        '.language-switcher button'
+    )
+    .forEach(button => {
+
+        button.classList.toggle(
+            'active',
+            button.dataset.lang === lang
+        );
+
+    });
+
+
+    localStorage.setItem(
+        'valkara-language',
+        lang
+    );
+
+}
+
+
+/* BOTÕES PT EN ES */
+
+document
+.querySelectorAll(
+    '.language-switcher button'
+)
+.forEach(button => {
+
+    button.addEventListener(
+        'click',
+        () => {
+
+            setLanguage(
+                button.dataset.lang
+            );
+
+        }
+    );
+
 });
+
+
+/* CARREGA O ÚLTIMO IDIOMA */
+
+const savedLanguage =
+localStorage.getItem(
+    'valkara-language'
+) || 'pt';
+
+setLanguage(savedLanguage);
 
 
 </script>
 
 
 </body>
-
 </html>
