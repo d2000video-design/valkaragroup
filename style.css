@@ -53,7 +53,8 @@ align-items:center;
 }
 
 .brand img{
-height:85px;
+height:72px;
+width:auto;
 display:block;
 }
 
@@ -482,7 +483,8 @@ height:92px;
 }
 
 .brand img{
-height:74px;
+height:64px;
+width:auto;
 }
 
 .menu-toggle{
