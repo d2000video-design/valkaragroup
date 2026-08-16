@@ -53,6 +53,53 @@ color:#444;
 font-size:.7rem;
 }
 
+/* Identidade Valkara: azul-marinho no lugar dos fundos pretos */
+:root{
+--bg:#071827;
+--card:#0b2235;
+--border:#173348;
+}
+
+body,
+.intro-section,
+.knowledge-section,
+.pillars-section,
+.projects-section,
+.join-section,
+.contact-section{
+background:#071827;
+}
+
+.site-header{
+background:rgba(7,24,39,.88);
+}
+
+.hero{
+background:
+linear-gradient(
+90deg,
+rgba(7,24,39,.92) 0%,
+rgba(7,24,39,.76) 35%,
+rgba(7,24,39,.44) 65%,
+rgba(7,24,39,.22) 100%
+),
+url("assets/hero-valkara.jpg");
+background-size:cover;
+background-position:center;
+}
+
+.pillar-card,
+.join-grid div,
+.project-card,
+.knowledge-shell,
+.knowledge-change-card,
+.knowledge-step,
+.knowledge-planning,
+.knowledge-sources{
+background:#0b2235;
+border-color:#173348;
+}
+
 @media(max-width:900px){
 
 .language-switcher{
@@ -224,7 +271,9 @@ class="hero"
 
 
             <a
-            href="#junte-se"
+            href="https://docs.google.com/forms/d/e/1FAIpQLSfaQUWXK1dlgxsjai_KkmL1t-yGr04H4uGs8plhQ4SFjeE-jg/viewform?pli=1"
+            target="_blank"
+            rel="noopener noreferrer"
             class="btn btn-secondary"
             data-i18n="heroJoin"
             >
@@ -1266,7 +1315,9 @@ class="section join-section"
 
 
         <a
-        href="#contacto"
+        href="https://docs.google.com/forms/d/e/1FAIpQLSfaQUWXK1dlgxsjai_KkmL1t-yGr04H4uGs8plhQ4SFjeE-jg/viewform?pli=1"
+        target="_blank"
+        rel="noopener noreferrer"
         class="btn btn-secondary dark"
         data-i18n="joinButton"
         >
